@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8"/>
+    <title>NavigationBar</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/NavBar.css" th:href="@{/css/NavBar.css}" />
+</head>
+<body>
+<div>
+
+
+    <div th:fragment="navbar" class="sidebar" data-color="danger" data-background-color="red" data-image="/img/sidebar-3.jpg">
+        <!--
+    Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+    Tip 2: you can also add an image using data-image tag
+-->
+        <div class="logo">
+            <a href="/Home" class="simple-text logo-normal">
+                SIA Project
+            </a>
+        </div>
+        <div class="sidebar-wrapper">
+            <ul class="nav">
+
+
+                <!--START Home-->
+                <li th:class="'nav-item ' + ${classActiveHome}">
+                    <a class="nav-link" href="/Home">
+                        <i class="material-icons">dashboard</i>
+                        <p>Home Page</p>
+                    </a>
+                </li>
+                <!--END Home-->
+
+                <!--START MI-->
+                <li th:class="'nav-item ' + ${classActiveMI}">
+                    <a class="nav-link" href="/MI">
+                        <i class="material-icons">data_usage</i>
+                        <p>MI</p>
+                    </a>
+                </li>
+                <!--END MI-->
+
+                <!--START Renewals-->
+                <li th:class="'nav-item ' + ${classActiveRenewals}">
+                    <a class="nav-link" href="/Renewals">
+                        <i class="material-icons">autorenew</i>
+                        <p>Renewals</p>
+                    </a>
+                </li>
+                <!--END Renewals-->
+
+                <!--START TeleReports-->
+                <li th:class="'nav-item ' + ${classActiveTeleReports}">
+                    <a class="nav-link" href="/TeleReports">
+                        <i class="material-icons">rss_feed</i>
+                        <p>Tele Reports</p>
+                    </a>
+                </li>
+                <!--END TeleReports-->
+
+                <!--START WebStats-->
+                <li th:class="'nav-item ' + ${classActiveWebStats}">
+                    <a class="nav-link" href="/WebStats">
+                        <i class="material-icons">web</i>
+                        <p>Web Stats</p>
+                    </a>
+                </li>
+                <!--END WebStats-->
+
+                <!--START Monitoring-->
+                <li th:class="'nav-item ' + ${classActiveMonitoring}">
+                    <a class="nav-link" href="/Monitoring">
+                        <i class="material-icons">insert_chart</i>
+                        <p>Monitoring</p>
+                    </a>
+                </li>
+                <!--END Monitoring-->
+
+                <!--START PolicySale-->
+                <li th:class="'nav-item ' + ${classActivePolicySale}">
+                    <a class="nav-link" href="/PolicySale">
+                        <i class="material-icons">local_grocery_store</i>
+                        <p>Policy Sale</p>
+                    </a>
+                </li>
+                <!--END PolicySale-->
+
+                
+
+                <!--START TravelReports-->
+                <li th:class="'nav-item ' + ${classActiveTravelReports}">
+                    <a class="nav-link" href="/TravelReports">
+                        <i class="material-icons">card_travel</i>
+                        <p>Travel Reports</p>
+                    </a>
+                </li>
+                <!--END TravelReports-->
+
+                                
+                                <!--START TestSection-->
+                <li th:class="'nav-item ' + ${classActiveTestSection}">
+                    <a class="nav-link" href="/TestSection">
+                        <i class="material-icons">3d_rotation</i>
+                        <p>Test Section</p>
+                    </a>
+                </li>
+                <!--END TestSection-->
+                                <!--START Section-->
+                <li th:class="'nav-item ' + ${classActiveSection}">
+                    <a class="nav-link" href="/Section">
+                        <i class="material-icons">add_a_photo</i>
+                        <p>Section</p>
+                    </a>
+                </li>
+                <!--END Section-->
+                <!--change-->
+
+                <hr style="height:3px; border:none; color:#f44336; background-color:#f44336;">
+
+                <!--START AddNewSection-->
+                <li th:class="'nav-item ' + ${classActiveAddNewSection}">
+                    <a class="nav-link" href="/AddNewSection">
+                        <i class="material-icons">add_circle</i>
+                        <p>Add New Section</p>
+                    </a>
+                </li>
+                <!--END AddNewSection-->
+
+                <!--START RemoveSection-->
+                <li th:class="'nav-item ' + ${classActiveRemoveSection}">
+                    <a class="nav-link" href="/RemoveSection">
+                        <i class="material-icons">remove_circle</i>
+                        <p>Remove Section</p>
+                    </a>
+                </li>
+                <!--END AddNewSection-->
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
